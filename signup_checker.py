@@ -23,7 +23,7 @@ def is_username_available(username):
 
     try:
         response = session.post("https://www.instagram.com/accounts/web_create_ajax/attempt/", headers=headers, data=data)
-        if response.status_code == 200 and ""username_suggestions"" in response.text:
+        if response.status_code == 200 and "username_suggestions" in response.text:
             return True
     except Exception as e:
         print("Error:", e)
